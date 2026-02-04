@@ -1,0 +1,26 @@
+[project]
+name = "geoalchemy-alembic-pydantic-fastapi-demo"
+version = "0.1.0"
+description = "Geospatial API demo with FastAPI, GeoAlchemy2, SQLAlchemy, Pydantic, Alembic, PostGIS (PostgreSQL), SpatiaLite (SQLite), uv."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.18.3",
+    "fastapi[all]>=0.128.0",
+    "geoalchemy2>=0.18.1",
+    "psycopg2-binary>=2.9.11",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.12.0",
+    "shapely>=2.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "dotenv>=0.9.9",
+    "isort>=7.0.0",
+    "pre-commit>=4.5.1",
+    "pytest>=9.0.2",
+    "python-dotenv>=1.2.1",
+    "ruff>=0.14.13",
+    "spatialite>=0.0.3",
+]

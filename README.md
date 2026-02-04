@@ -189,14 +189,14 @@ Expected response:
 ```json
 {"status": "ok", "db": "up"}
 ```
-
+51.50341458011505, -0.11953217890123567
 ## Usage
 
 ### Create a point
 ```bash
 curl -X POST http://localhost:8000/api/points \
   -H "Content-Type: application/json" \
-  -d '{"geom": "POINT(51.51999 -0.10684)", "value": 42.5}'
+  -d '{"geom": "POINT(-0.11944 51.50339)", "value": 10.5}'
 ```
 
 Response:
@@ -204,8 +204,8 @@ Response:
 {
   "id": 1,
   "created_at": "2026-02-03T21:21:55.391439Z",
-  "geom": "POINT (51.51999 -0.10684)",
-  "value": 42.5
+  "geom": "POINT (-0.11944 51.50339)",
+  "value": 10.5
 }
 ```
 
@@ -222,8 +222,8 @@ Response:
   {
     "id": 1,
     "created_at": "2026-02-03T21:21:55.391439Z",
-    "geom": "POINT (51.51999 -0.10684)",
-    "value": 42.5
+    "geom": "POINT (-0.11944 51.50339)",
+    "value": 10.5
   }
 ]
 ```
@@ -241,8 +241,8 @@ Response:
   {
     "id": 1,
     "created_at": "2026-02-03T21:21:55.391439Z",
-    "geom": "POINT (51.51999 -0.10684)",
-    "value": 42.5
+    "geom": "POINT (-0.11944 51.50339)",
+    "value": 10.5
   }
 ]
 ```
@@ -267,7 +267,7 @@ This is handled in `app/db.py` which loads the appropriate extension on connecti
 
 ### Geometry Handling
 
-- **Input:** WKT strings (e.g., `"POINT(51.51999 -0.10684)"`)
+- **Input:** WKT strings (e.g., `"POINT(-0.11944 51.50339)"`)
 - **Storage:** PostGIS/SpatiaLite geometry type via GeoAlchemy2
 - **Output:** WKT strings via Pydantic field validator
 

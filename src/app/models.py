@@ -17,8 +17,15 @@ class ExamplePoint(Base):
     """
     SQLAlchemy model representing a geospatial point with an associated value.
 
-    This model stores point geometries in WGS84 (SRID 4326) coordinate
-    reference system along with a numeric value and creation timestamp.
+    The geometry is stored as a PostGIS POINT in WGS84 / SRID 4326.
+
+    Coordinate order
+    ----------------
+    When represented as WKT, the point uses X/Y order:
+
+    - X = longitude
+    - Y = latitude
+
 
     :cvar id: Primary key identifier.
     :cvar created_at: Timestamp of record creation, defaults to current time.

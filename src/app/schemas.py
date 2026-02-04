@@ -22,10 +22,10 @@ class ExamplePointCreate(BaseModel):
     """
 
     geom: str = Field(
-        ..., description="WKT Point geometry", examples=["POINT(51.51999 -0.10684)"]
+        ..., description="WKT Point geometry", examples=["POINT(-0.11944 51.50339)"]
     )
     value: float = Field(
-        ..., description="Numeric value for this point", examples=[42.5]
+        ..., description="Numeric value for this point", examples=[10.5]
     )
 
 
@@ -45,10 +45,10 @@ class ExamplePointModel(BaseModel):
     id: int
     created_at: Optional[datetime]
     geom: str = Field(
-        ..., description="WKT Point geometry", examples=["POINT(51.51999 -0.10684)"]
+        ..., description="WKT Point geometry", examples=["POINT(-0.11944 51.50339)"]
     )
     value: float = Field(
-        ..., description="Numeric value for this point", examples=[42.5]
+        ..., description="Numeric value for this point", examples=[10.5]
     )
 
     model_config = {"from_attributes": True}
